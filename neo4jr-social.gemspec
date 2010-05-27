@@ -9,9 +9,9 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Matthew Deiters"]
-  s.date = %q{2010-05-03}
+  s.date = %q{2010-05-27}
   s.default_executable = %q{start-neo4jr-social}
-  s.description = %q{A self-containted lightweight REST interface to Neo4j using JRuby }
+  s.description = %q{A self-containted and lightweight REST interface to Neo4j using JRuby.}
   s.email = %q{matthew_deiters@mckinsey.com}
   s.executables = ["start-neo4jr-social"]
   s.extra_rdoc_files = [
@@ -59,15 +59,15 @@ Gem::Specification.new do |s|
   s.homepage = %q{http://github.com/mdeiters/neo4jr-social}
   s.rdoc_options = ["--charset=UTF-8"]
   s.require_paths = ["lib"]
-  s.rubygems_version = %q{1.3.5}
+  s.rubygems_version = %q{1.3.6}
   s.summary = %q{A self-containted and lightweight REST interface to Neo4j using JRuby.}
   s.test_files = [
     "spec/format_handler_spec.rb",
      "spec/json_printer_spec.rb",
-     "spec/service_spec.rb",
      "spec/spec_helper.rb",
-     "examples/facebook.rb",
-     "examples/linkedin.rb"
+     "spec/service_spec.rb",
+     "examples/linkedin.rb",
+     "examples/facebook.rb"
   ]
 
   if s.respond_to? :specification_version then
@@ -80,14 +80,14 @@ Gem::Specification.new do |s|
       s.add_development_dependency(%q<rack-test>, [">= 0"])
       s.add_runtime_dependency(%q<neo4jr-simple>, ["= 0.2.1"])
       s.add_runtime_dependency(%q<sinatra>, [">= 1.0"])
-      s.add_runtime_dependency(%q<json-jruby>, [">= 0"])
+      s.add_runtime_dependency(%q<json-jruby>, [">= 1.4.1"])
     else
       s.add_dependency(%q<rspec>, [">= 1.2.9"])
       s.add_dependency(%q<rest-client>, [">= 0"])
       s.add_dependency(%q<rack-test>, [">= 0"])
       s.add_dependency(%q<neo4jr-simple>, ["= 0.2.1"])
       s.add_dependency(%q<sinatra>, [">= 1.0"])
-      s.add_dependency(%q<json-jruby>, [">= 0"])
+      s.add_dependency(%q<json-jruby>, [">= 1.4.1"])
     end
   else
     s.add_dependency(%q<rspec>, [">= 1.2.9"])
@@ -95,7 +95,7 @@ Gem::Specification.new do |s|
     s.add_dependency(%q<rack-test>, [">= 0"])
     s.add_dependency(%q<neo4jr-simple>, ["= 0.2.1"])
     s.add_dependency(%q<sinatra>, [">= 1.0"])
-    s.add_dependency(%q<json-jruby>, [">= 0"])
+    s.add_dependency(%q<json-jruby>, [">= 1.4.1"])
   end
 end
 
