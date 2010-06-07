@@ -13,10 +13,12 @@ begin
     gem.authors = ["Matthew Deiters"]
     gem.add_development_dependency "rspec", ">= 1.2.9"
     gem.add_development_dependency "rest-client"
-    gem.add_development_dependency "rack-test"
-    gem.add_dependency 'neo4jr-simple', "0.2.1" unless ENV['neo4jr_simple']
-    gem.add_dependency 'sinatra', ">= 1.0"
-    gem.add_dependency 'json-jruby', ">= 1.4.1"
+    gem.add_development_dependency 'neo4jr-simple', "0.2.2" unless ENV['neo4jr_simple']
+    gem.add_development_dependency 'sinatra', ">= 1.0"
+    gem.add_development_dependency 'json-jruby', ">= 1.4.1"
+    # gem.add_dependency 'neo4jr-simple', "0.2.2" unless ENV['neo4jr_simple']
+    # gem.add_dependency 'sinatra', ">= 1.0"
+    # gem.add_dependency 'json-jruby', ">= 1.4.1"
   end
   Jeweler::GemcutterTasks.new
 rescue LoadError
@@ -55,7 +57,7 @@ task :warify do
   commands = ['rm -rf tmp']
   commands << 'warble'
   commands << 'rm -f jetty-runtime/webapps/neo4jr-social.war'
-#  commands << "mv neo4jr-social-#{version}.war jetty-runtime/webapps/neo4jr-social.war"
+  commands << 'mkdir -p jetty-runtime/webapps/'
   commands << "mv neo4jr-social.war jetty-runtime/webapps/neo4jr-social.war"
   commands.each do |command|
     STDERR.puts("Executing: #{command}")
